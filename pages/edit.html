@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="../style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navebar">
+      <div class="brand">CRUD</div>
+      <div class="menu">
+        <ul class="all-list">
+          <li><a href="../index.html" class="active">Home</a></li>
+
+          <li><a href="pages/view.html">View</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <!-- name,email, mobile,branch,fees,gender -->
+      <div class="container">
+        <div class="box-heading">Edit Student datail</div>
+        <br /><br />
+        <div class="input-field">
+          <i class="fa fa-user"></i>
+          <input type="text" placeholder="Enter student name" class="field" />
+        </div>
+        <div class="input-field">
+          <i class="fa fa-mobile"></i>
+          <input type="mobile" placeholder="Enter student name" class="field" />
+        </div>
+        <div class="input-field">
+          <i class="fa fa-envelope"></i>
+          <input type="email" placeholder="Enter student name" class="field" />
+        </div>
+
+        <div class="input-field">
+          <i class="fa fa-puzzle-piece"></i>
+          <input type="text" placeholder="Enter branch name" class="field" />
+        </div>
+
+        <div class="input-field">
+          <i class="fa fa-dollar"></i>
+          <input type="text" placeholder="Enter student fees" class="field" />
+        </div>
+        <button type="submit" id="btn">Save</button>
+      </div>
+    </main>
+  </body>
+</html>
