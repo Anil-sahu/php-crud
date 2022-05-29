@@ -11,48 +11,57 @@
     />
   </head>
   <body>
-<?php include 'header.php'?>
+  <nav class="navebar">
+      <div class="brand">CRUD</div>
+      <div class="menu">
+        <ul class="all-list">
+          <li><a href="../index.php" class="active">Home</a></li>
+
+          <li><a href="view.php">View</a></li>
+        </ul>
+      </div>
+    </nav>
     <br /><br /><br />
     <main>
       <table id="customers">
         <tr>
           <th>id</th>
           <th>name</th>
-          <th>Mob_number</th>
-
+          <th>Mobile</th>
+          <th>Email</th>
           <th>Branch</th>
           <th>Fee</th>
           <th>Edit</th>
           <th>Delete</th>
         </tr>
+        <?php 
+        include '../db/dbcon.php';
+        $selectQuery = "select * from student ";
+        $query = mysqli_query($connection,$selectQuery);
+       
+        while( $result = mysqli_fetch_assoc($query)){
+          
+    ?>
         <tr>
-          <td>1</td>
-          <td>Anil sahu</td>
-          <td>986906567</td>
+          <td><?php echo $result['id']; ?></td>
+          <td><?php echo $result['name']; ?></td>
+          <td><?php echo $result['mobile']; ?></td>
 
-          <td>CSE</td>
-          <td>27000</td>
+          <td><?php echo $result['email']; ?></td>
+          <td><?php echo $result['branch']; ?></td>
+          <td><?php echo $result['fee']; ?></td>
           <td>
-            <input type="submit" onclick="editData()" value="edit" />
+            
+            <a href ="edit.php?id=<?php echo $result['id'];?>" class="mod"><i class="fa fa-edit"></i></a>
           </td>
           <td>
-            <input type="submit" onclick="deleteData()" value="delete" />
+          <a href ="" class="mod"><i class="fa fa-trash"></i></a>
           </td>
         </tr>
-        <tr>
-          <td>2</td>
-          <td>Naveen Pal</td>
-          <td>986906567</td>
-
-          <td>CSE</td>
-          <td>27000</td>
-          <td>
-            <input type="submit" onclick="editData()" value="edit" />
-          </td>
-          <td>
-            <input type="submit" onclick="deleteData()" value="delete" />
-          </td>
-        </tr>
+        <?php
+      }
+      ?>
+   
       </table>
     </main>
     <script src="index.js"></script>
