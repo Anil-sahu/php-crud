@@ -2,7 +2,7 @@
 $server = "localhost";
 $user ="root";
 $password ="";
-$db="CRUDDB";
+$db="cruddb";
 
 $connection = mysqli_connect($server,$user,$password,$db);
 if($connection){

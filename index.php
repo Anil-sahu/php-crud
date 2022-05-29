@@ -28,16 +28,42 @@
         <div class="box-heading">Add Student</div>
         <br /><br />
         <form action =""method="POST">
-        <?php include 'pages/form.php' ?>
-        <button type="submit" id="btn" onclick="studentData()" name ="submit">Add</button>
-        </form>
+        <?php include 'pages/form.php';?>
+        <input type ="submit"id="btn"name ="submited" value="Add">
      
+        </form>
+      
       </div>
     </main>
   </body>
 </html>
 <?php
-if(isset($_POST['submit'])){
+include 'db/dbcon.php';
+if(isset($_POST['submited'])){
+$name =$_POST['name'];
+$mobile =$_POST['mobile'];
+$email =$_POST['email'];
+$branch = $_POST['branch'];
+$fee = $_POST['fee'];
+$insertQuery ="insert into student(name,mobile,email,branch,fee) value('$name','$mobile','$email','$branch','$fee')";
+$query = mysqli_query($connection,$insertQuery);
+
+if($query){
+  ?>
+  <script>
+alert("Data inserted successfull");
+window.location.href="pages/view.php";
+    </script>
+
+    <?php
+}else{
+  ?>
+
+<Script>
+  alert("Data not inserted") ;
+</Script>
+<?php
+}
 
 }
 
