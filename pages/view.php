@@ -11,16 +11,7 @@
     />
   </head>
   <body>
-    <nav class="navebar">
-      <div class="brand">All Data</div>
-      <div class="menu">
-        <ul class="all-list">
-          <li><a href="../index.html">Home</a></li>
-
-          <li><a href="pages/view.html" class="active">View</a></li>
-        </ul>
-      </div>
-    </nav>
+<?php include 'header.php'?>
     <br /><br /><br />
     <main>
       <table id="customers">
@@ -42,10 +33,10 @@
           <td>CSE</td>
           <td>27000</td>
           <td>
-            <a href="edit.html">Edit</a>
+            <input type="submit" onclick="editData()" value="edit" />
           </td>
           <td>
-            <a href="delete.html">delete</a>
+            <input type="submit" onclick="deleteData()" value="delete" />
           </td>
         </tr>
         <tr>
@@ -56,13 +47,14 @@
           <td>CSE</td>
           <td>27000</td>
           <td>
-            <a href="edit.html">Edit</a>
+            <input type="submit" onclick="editData()" value="edit" />
           </td>
           <td>
-            <a href="delete.html">delete</a>
+            <input type="submit" onclick="deleteData()" value="delete" />
           </td>
         </tr>
       </table>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>
