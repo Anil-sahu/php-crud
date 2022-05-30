@@ -15,7 +15,7 @@
     <div class="brand">CRUD</div>
     <div class="menu">
       <ul class="all-list">
-        <li><a href="index.php" class="active">Home</a></li>
+        <li><a href="index.php" id="active">Home</a></li>
 
         <li><a href="pages/view.php">View</a></li>
       </ul>
@@ -25,15 +25,17 @@
     <!-- name,email, mobile,branch,fees,gender -->
     <div class="container">
       <div class="box-heading">
-        <h1 style="color:#03f892;">Welcome</h1>
+        <h1 style="color:#68f1b8;">Welcome</h1>
+        <hr>
 
         <img src="image/std.svg" />
+        <hr>
         <p>Fill all details of student and add </p>
       </div>
 
       <form action="" method="POST">
         <div class="subhead">Add student</div>
-        <hr style="margin-bottom:20px;border:1px solid #03f892;">
+        <hr>
         <?php include 'pages/form.php'; ?>
         <input type="submit" id="btn" name="submited" value="Add">
 

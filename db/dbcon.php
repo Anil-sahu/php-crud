@@ -1,27 +1,26 @@
-<?php 
+<?php
 $server = "localhost";
-$user ="root";
-$password ="";
-$db="cruddb";
+$user = "root";
+$password = "";
+$db = "cruddb";
 
-$connection = mysqli_connect($server,$user,$password,$db);
-if($connection){
-    ?>
-    
+$connection = mysqli_connect($server, $user, $password, $db);
+if ($connection) {
+?>
+
     <script>
-    alert("Connection successful");
+        console.log("Connection successful");
     </script>
 
 
- <?php 
-}else{
+<?php
+} else {
 
-    ?>
+?>
     <script>
-
-        echo "connection is failed";
+        console.log("connection failed");
     </script>
-    <?php
+<?php
 }
 
 ?>

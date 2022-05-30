@@ -54,8 +54,7 @@
     border-bottom: 3px solid #78B8C0;
 }
 
-.active {
-
+#active {
     border: 1px solid #78B8C0;
     color: #78B8C0;
 
@@ -121,23 +120,23 @@ body {
 .input-field i {
     padding-top: 8px;
     background-color: #002838;
-    color: #78B8C0;
+    color: #68f1b8;
     width: 10%;
     text-align: center;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
 }
 
-.input-field:focus {
+.input-field:focus,
+.input-field:hover {
     outline: 1px;
     border: 1px solid #002838;
-
-
+    box-shadow: 1px 1px 5px rgb(75, 75, 75);
 }
 
 #btn {
     background-color: #002838;
-    color: #78B8C0;
+    color: #68f1b8;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     width: fit-content;
@@ -148,9 +147,15 @@ body {
     border: 1px solid #F0F0F0
 }
 
+#btn:hover {
+    color: #002838;
+    background-color: #68f1b8;
+    border: 1px solid #002838;
+}
+
 form {
     text-align: center;
-    width: 100%;
+
 }
 
 .box-heading {
@@ -168,8 +173,8 @@ form {
 
 .box-heading p {
     font-size: 14px;
-    margin: 20px;
-    color: #78B8C0;
+    margin: 16px;
+    color: #caf1e1;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
@@ -188,7 +193,7 @@ form {
     border-collapse: collapse;
     width: 100%;
     padding: 10px;
-    text-align: center;
+    text-align: left;
 
 
 
@@ -200,19 +205,24 @@ table {
 
 #customers td,
 #customers th {
-    border: 1px solid #ddd;
+
     padding: 3px 8px;
     font-size: 12px;
+    text-align: center;
 
 }
 
-#customers tr:nth-child(even) {
+/* #customers tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
 #customers tr:nth-child(odd) {
     background-color: rgb(187, 187, 187);
 
+} */
+#customers tr {
+    background-color: white;
+    border: 1px solid #002838;
 }
 
 #customers tr:hover {
@@ -236,13 +246,16 @@ td a {
 
 .fa-edit {
 
-    background-color: rgb(91, 151, 0);
+    background-color: #002838;
+    color: #68f1b8;
+
 
 }
 
 .fa-trash {
 
-    background-color: rgb(255, 102, 0);
+    background-color: #002838;
+    color: red;
 
 }
 
@@ -276,29 +289,50 @@ td a {
         font-size: 14px;
     }
 
-    .box-heading {
-        display: none;
+    .box-heading img {
+        height: 200px;
+        width: 200px;
     }
 
+    .box-heading h1 {
+        font-size: 30px;
+    }
+
+    .box-heading {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 8px;
+    }
 
     .input-field {
-        margin: 10px;
+        margin: 10px auto;
         width: 90%;
         height: 30px;
 
     }
 
+    .field {
+        padding: 10px auto;
+    }
+
     .subhead {
         width: 100%;
         font-size: 20px;
-        display: flex;
+        background-color: #68f1b8;
+        color: #002838;
+        text-align: center;
+        font-weight: bold;
 
+    }
+
+    form hr {
+        margin-bottom: 20px;
     }
 
     .container {
 
         margin: 20px auto;
         width: 90%;
+        flex-direction: column;
 
 
     }
@@ -326,4 +360,8 @@ td a {
 
     }
 
+    form {
+        width: 100%;
+        text-align: center;
+    }
 }

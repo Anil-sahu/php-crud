@@ -14,9 +14,9 @@
     <div class="brand">CRUD</div>
     <div class="menu">
       <ul class="all-list">
-        <li><a href="../index.php" class="active">Home</a></li>
+        <li><a href="../index.php">Home</a></li>
 
-        <li><a href="view.php">View</a></li>
+        <li><a href="view.php" id="active">View</a></li>
       </ul>
     </div>
   </nav>
