@@ -23,9 +23,16 @@
   <main>
 
     <div class="container">
-      <div class="box-heading">Edit Student datail</div>
+      <div class="box-heading">
+        <h1 style="color:#03f892;">Welcome</h1>
+
+        <img src="../image/std.svg" />
+        <p>Fill all details of student and add </p>
+      </div>
       <br /><br />
       <form action="" method="POST">
+        <div class="subhead" style="background-color:#002838;color:#03f892;font-size:30px;font-family:Verdana, Geneva, Tahoma, sans-serif;padding:10px 20px">Add student</div>
+        <hr style="margin-bottom:20px;border:1px solid #03f892;">
 
         <?php
         include '../db/dbcon.php';
